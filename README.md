@@ -1,5 +1,19 @@
 # README
 
+
+
+
+
+
+
+
+
+
+
+
+#DB設計
+
+
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -73,8 +87,8 @@
 |brand|string|
 |category_id|integer|null: false, foreign_key: true|
 |buyer_id|integer|foreign_key: true|
-|seller_id|integer|foreign_key: true| <!-- user_idはと同じ内容になるため、user_id削除 -->
-<!-- |brand_id|integer|foreign_key: true| -->
+|seller_id|integer|foreign_key: true| 
+
 ### Association
 - has_many :images
 - belongs_to :category
@@ -85,11 +99,6 @@
 - belongs_to_active_hash :status
 - belongs_to_active_hash :shipping
 - belongs_to_active_hash :fee
-
-
-<!-- - belongs_to :brand -->
-
-<!-- itemsテーブルに商品状態 : condition を追記, brandを一時的に直接入力とするために、brandカラムを仮置きし、コメントアウト -->
 
 ## imagesテーブル
 |Column|Type|Options|
@@ -108,10 +117,3 @@
 ### Association
 - has_many :items
 
-
-<!-- ## brandsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null:false|
-### Association
-- has_many :items -->
